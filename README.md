@@ -15,6 +15,7 @@ npm install sequelize
 그리고 sql은 
 
 '''
+
 CREATE TABLE IF NOT EXISTS users (
     id INT AUTO_INCREMENT PRIMARY KEY,       
     username VARCHAR(255) NOT NULL UNIQUE,
@@ -32,6 +33,7 @@ CREATE TABLE IF NOT EXISTS sessions (
     expiredAt TIMESTAMP NOT NULL,            
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );
+
 '''
 
 이렇게 구성 하시면 됩니다.
